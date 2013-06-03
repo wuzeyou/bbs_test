@@ -2,13 +2,13 @@
 
 include("conn.php");
 
-  if($_GET[out]){
+  if(isset($_GET['out'])){
     setcookie("cookie", "out");
     echo "<script language=\"javascript\">location.href='login.php';</script>";
   }
 
 
-  if($_POST[id]=='admin'){
+  if($_POST['id']=='admin'){
     $pw=md5($_POST[pw]);
     if($pw=='e1bfd762321e409cee4ac0b6e841963c'){
      setcookie("cookie", "ok");
