@@ -10,12 +10,10 @@
 
 <table width=500 border="0" cellpadding="5" cellspacing="1" bgcolor="#add3ef">
   <tr bgcolor="#eff3ff">
-  <td>Title:<?=$row[title]?> User:<?=$row[user]?></td>
+  <td>Title:<?=$row['title']?> User:<?=$row['user']?></td>
   </tr>
   <tr bgColor="#ffffff">
-  <td>Content:<?
- echo htmtocode($row[content]);
-   ?></td>
+  <td>Content:<?=htmtocode($row['content'])?></td>
   </tr>
 </table>
 <?php
