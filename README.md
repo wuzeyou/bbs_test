@@ -17,3 +17,4 @@ Usage：
         PRIMARY KEY  (`id`)
         ) ENGINE=InnoDB DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
 
+3. login页面用户名为admin， 密码为php
