@@ -10,7 +10,7 @@ include("conn.php");
   if(isset($_POST['id'])){
     $id = $_POST['id'];
     if($id == 'admin'){
-      $pw=md5($_POST[pw]);
+      $pw=md5($_POST['pw']);
       if($pw=='e1bfd762321e409cee4ac0b6e841963c'){
       setcookie("cookie", "ok");
         echo "<script language=\"javascript\">location.href='login.php';</script>";
