@@ -8,26 +8,26 @@ function CheckPost()
 {
 	if (myform.user.value=="")
 	{
-		alert("Please input user name");
+		alert("请输入用户名");
 		myform.user.focus();
 		return false;
 	}
 
 	if (myform.content.value=="")
 	{
-		alert("Content can't be empty");
+		alert("内容不能为空");
 		myform.content.focus();
 		return false;
 	}
 }
 </SCRIPT>
 
-<form action="add.php" method="post" name="myform" onsubmit="return CheckPost();">
-	User:<input type="text" size="10" name="user" /><br>
-	Title:<input type="text" name="title" /><br/>
-  	Content:<textarea name="content"  cols="60" rows="9"></textarea><br/>
+<form action="" method="post" name="myform" onsubmit="return CheckPost();">
+	你的名字：<input type="text" size="10" name="user" /><br>
+	留言标题：<input type="text" name="title" /><br/>
+  	留言内容：<textarea name="content"  cols="60" rows="9"></textarea><br/>
 
- 	<input type="submit" name="submit" value="Submit"/>
+ 	<input type="submit" name="submit" value="提交留言"/>
 
 </form>
 

@@ -41,13 +41,13 @@ function Checklogin()
 </SCRIPT>
 
 <form action="" method="post" name="myform" onsubmit="return Checklogin();">
-  ID:<input type="text" name="id" /><br>
-  PW:<input type="password" name="pw" /> <input type="submit" name="submit" value="Login"/>
+  用户名：  <input type="text" name="id" /><br>
+  密码：   <input type="password" name="pw" /> <input type="submit" name="submit" value="Login"/>
   </form>
 <?php
 }else{
 ?>
-  <a href='?out=login'>Logout</a>
+  <a href='?out=login'>离开</a>
 <?php
 }
 ?>
