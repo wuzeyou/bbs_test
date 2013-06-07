@@ -8,7 +8,7 @@
 	留言标题：<input type=text name="title" ><br>
   	留言内容：<textarea name="content"  cols="60" rows="9"></textarea><br>
 
- 	<input type=submit name="submit" value="提交留言"/>
+ 	<input type=submit id="submit" name="submit" value="提交留言"/>
 </form>
 
 <SCRIPT language=javascript>   //check username & content, Javascript
