@@ -8,6 +8,7 @@ a simple messageboard
 1. 实现评论功能。usage：在bbs数据库下新建名为comments的表，具体见comments.sql文件
 2. 评论显示页面美化，css更新
 3. 撤除login页
+4. 通过第三方js表单验证插件 jquery.validate.js，实现首页和评论页的表单验证，主要是内容不能为空，其他无限制
 
 Usage：
 
