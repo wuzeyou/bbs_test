@@ -37,14 +37,16 @@
 <table width = 500 border = "0" cellpadding = "5" cellspacing = "1" bgcolor = "#add3ef">
 <!--    <tr> -->
     <tr bgcolor = "#eff3ff">
-        <td>Title:<?=$myrow['title']?> User:<?=$myrow['user']?></td>
+        <td>题目:<?=$myrow['title']?> User:<?=$myrow['user']?></td>
     </tr>
 <!--    <tr> -->
     <tr bgColor = "#ffffff">
         <td>Content:<?=htmtocode($myrow['content'])?></td>
     </tr>
 </table>
+<a href="post.php?postid=<?=$myrow['id']?>">评论</a>
 </div>
+<br>
 
 <?php
     $post_num++;

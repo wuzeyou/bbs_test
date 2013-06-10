@@ -3,6 +3,12 @@ bbs_test
 
 a simple messageboard
 
+##Update:
+####13-06-10:
+1. 实现评论功能。usage：在bbs数据库下新建名为comments的表，具体见comments.sql文件
+2. 评论显示页面美化，css更新
+3. 撤除login页
+
 Usage：
 
 1. 在数据库中建立名为bbs的数据库，可利用phpmyadmin

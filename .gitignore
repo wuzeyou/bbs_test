@@ -4,3 +4,7 @@
 .idea/.name
 
 .idea/bbs_test.iml
+
+comment/
+
+.DS_Store
