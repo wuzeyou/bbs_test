@@ -32,7 +32,7 @@ $query_comment = mysql_query("SELECT * FROM comments WHERE postid = $post_id ORD
             //在上例中新增的部分
             {
             rules: {
-                body: "required",  //密码1必填
+                body: "required",  //内容必填
             },
             messages: {  //对应上面的错误信息
                 body: "回应内容总要写吧~<br>",
@@ -65,17 +65,30 @@ $query_comment = mysql_query("SELECT * FROM comments WHERE postid = $post_id ORD
 <div id="main" align="center">
 
 <div class="post">
-<!-- <table> -->
-<table width = 500 border = "0" cellpadding = "5" cellspacing = "1" bgcolor = "#add3ef">
-<!--    <tr> -->
-    <tr bgcolor = "#eff3ff">
-        <td>题目:<?=$post['title']?> User:<?=$post['user']?></td>
-    </tr>
-<!--    <tr> -->
-    <tr bgColor = "#ffffff">
-        <td>Content:<?=htmtocode($post['content'])?></td>
-    </tr>
-</table>
+<!--显示标题-->
+<?php
+    if ($post['title']) {
+?>
+    <div class="title" align="right"><?=$post['title']?></div>
+<?php
+} else{
+?>
+    <div class="title" align="right">无题</div>
+<?php
+}
+//--显示用户名-->  
+    if ($post['user']) {
+?>
+    <div class="username" align="right"><?=$post['user']?></div>
+<?php
+} else{
+?>
+    <div class="username" align="right">匿名人士</div>
+<?
+}
+?> 
+    <p align="left"><?=$post['content']?></p>
+    <div class="datetime" align="left"><?=$post['lastdate']?></div>
 </div>
 
 <?php
@@ -88,11 +101,13 @@ while ($comments = mysql_fetch_array($query_comment)) {
 <?php
     if ($comments['name']) {
 ?>
-    <div class="name"><?=$comments['name']?></div>
+    <div class="name"><?=$comments['name']?><i >说</i></div>
+    
 <?php
 } else{
 ?>
-    <div class="name">路人说</div>
+    <div class="name">路人<i>说</i></div>
+    
 <?
 }
 ?>
@@ -110,7 +125,6 @@ $comment_num++;
 	<form id="addCommentForm" name="addComment" method="post" action="submit.php">
     	<div align="left">
 
-            
             <label for="body">你的回应</label>
             <textarea name="body" id="body" cols="20" rows="5"></textarea>
             <!--传递postid，隐藏变量-->

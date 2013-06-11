@@ -30,6 +30,17 @@
     
     while ($myrow = mysql_fetch_array($query))
     {
+        //取得该条post的评论总数,$num_comment为最终取得的数字
+        $post_id = $myrow['id'];
+        $comms = mysql_query("SELECT count(*) FROM comments WHERE postid = $post_id", $conn);
+        $ncomm = mysql_fetch_array($comms);
+        $num_comment = $ncomm[0];
+        // Attitudes' number
+        $attis = mysql_query("SELECT like_num,bless_num,shit_num FROM message WHERE id=$post_id", $conn);
+        $natti = mysql_fetch_array($attis);
+        $num_like = $natti['like_num'];
+        $num_bless = $natti['bless_num'];
+        $num_shit = $natti['shit_num'];
 ?>
 
 <div class="post">
@@ -44,11 +55,24 @@
         <td>Content:<?=htmtocode($myrow['content'])?></td>
     </tr>
 </table>
-<a href="post.php?postid=<?=$myrow['id']?>">评论</a>
+<a href="post.php?postid=<?=$post_id?>">评论(<?=$num_comment?>)</a>
+<form action="submitattitude.php" method="post" name="myattitude" id="myattitude">
+    <lable for="like">喜欢(<?=$num_like?>)</label>
+    <input type="checkbox" name="like">
+    <lable for="bless">祝福(<?=$num_bless?>)</label>
+    <input type="checkbox" name="bless">
+    <lable for="shit">管我屁事(<?=$num_shit?>)</label>
+    <input type="checkbox" name="shit">
+    <input type="hidden" name="postid" value="<?=$post_id?>" />
+    <input type="hidden" name="page" value="<?=$page?>" />
+    <input type="submit" id="submit" name="attitude" value="表态"/>
+</form>
+
 </div>
 <br>
 
 <?php
+    //以下部分为实现翻页条功能
     $post_num++;
     }
     $first = 1;
@@ -62,7 +86,6 @@
         echo "<a href='list.php?page=".$first."'>首页</a> ";
         echo "<a href='list.php?page=".$prev."'>上一页</a> ";
     }
-//    echo "<div align='center'>共有".$pages."页(".$page."/".$pages.")";
     echo "[".$page."/"."$pages"."] ";
     if ($page < $pages){
         echo "<a href='list.php?page=".$next."'>下一页</a> ";
@@ -72,3 +95,10 @@
         echo "下一页 尾页";
     }
 ?>
+
+
+
+
+
+
+
