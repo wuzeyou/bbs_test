@@ -10,7 +10,7 @@
   		$result = mysql_query($sql);
 
   		if ($result) {
-			echo "<script language=\"javascript\">alert('Add post successfully');location.href='list.php'; </script>";}
+			echo "<script language=\"javascript\">location.href='list.php'; </script>";}
 		else {
 			echo "<script language=\"javascript\">alert('Failed to post');history.go(-1)</script>";
 		}

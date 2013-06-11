@@ -205,8 +205,8 @@ label{
 }
 
 /*验证表单后的字体显示*/
-#myform label.error,
-#addCommentForm label.error{
+#myform #nocontent,
+#addCommentForm #nocomment{
     color: Red;
     font-size: 13px;
     margin-left: 5px;

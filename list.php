@@ -61,7 +61,7 @@
     <input type="checkbox" name="like">
     <lable for="bless">祝福(<?=$num_bless?>)</label>
     <input type="checkbox" name="bless">
-    <lable for="shit">管我屁事(<?=$num_shit?>)</label>
+    <lable for="shit">关我屁事(<?=$num_shit?>)</label>
     <input type="checkbox" name="shit">
     <input type="hidden" name="postid" value="<?=$post_id?>" />
     <input type="hidden" name="page" value="<?=$page?>" />
