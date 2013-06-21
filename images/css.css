@@ -1,8 +1,56 @@
-td {
-  line-height: 16pt;
-	font-size: 10pt;
-	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+
+#liebiao ul {list-style-type: none; }
+
+#liebiao li {position:absolute; width:300;}
+
+table {table-layout: fixed;
+	width=100%;}
+
+.listpost .title{
+	font-size:22px;
+	padding-bottom:10px;
+	color:#f7996d;
 }
+
+.listpost .author{
+	font-size:10px;
+}
+
+.listpost .content {
+ font-size:16px;
+	line-height:1.5;
+	overflow-x:hidden;
+	word-break: break-all ; 
+	word-wrap: break-word;
+}
+
+.listpost #comm {
+	font-size: 14px;
+}
+
+.listpost{
+	
+	/* Syling the comments and the comment form container */
+	
+	padding:12px;
+	width:300px;
+	position:relative;
+	background-color:#fcfcfc;
+	border:1px solid white;
+	color:#888;
+	margin-bottom:25px;
+	
+	/* CSS3 rounded corners and drop shadows */
+	
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+
+	-moz-box-shadow:2px 2px 0 #c2c2c2;
+	-webkit-box-shadow:2px 2px 0 #c2c2c2;
+	box-shadow:2px 2px 0 #c2c2c2;
+}
+	
 a:link {
 	text-decoration: none;
 	color: #000000;
@@ -211,6 +259,24 @@ label{
     font-size: 13px;
     margin-left: 5px;
     padding-left: 16px;
+}
+
+#bigbox
+{
+position:absolute;
+}
+
+#liebiao
+{
+position:absolute;
+}
+
+#bm
+{
+position:relative;
+top:0;
+left:45%;
+font-size: 20px;
 }
 
 

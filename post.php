@@ -16,6 +16,18 @@ include "head.php"
 ?>
 
 <body>
+<!-- 导航栏 --> 
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="list.php">昨天说 Yes!Today.Talk</a>
+    <ul class="nav">
+      <li><a href="index.php">添加留言</a></li>
+      <li><a href="list.php">浏览留言</a></li>
+      <li><a href="#">关于</a></li>
+    </ul>
+  </div>
+</div>
+
 <div id="main" align="center">
 
 <div class="post">
