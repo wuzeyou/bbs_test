@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013 年 06 月 10 日 15:40
+-- 生成日期: 2013 年 06 月 22 日 00:52
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.3.15
 
@@ -30,10 +30,10 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(128) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `body` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `dt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `dt` datetime NOT NULL,
   `postid` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
 
 --
 -- 转存表中的数据 `comments`
@@ -51,7 +51,13 @@ INSERT INTO `comments` (`id`, `name`, `body`, `dt`, `postid`) VALUES
 (9, '我不是二逼', '楼上是二逼！', '2013-06-09 22:31:25', 8),
 (10, '我不是测试员', '听说只有评论内容足够长，甚至长到比原po还要长，才能看出格式对不对，整不整齐，是这样没错的！', '2013-06-10 13:41:11', 1),
 (11, '', '看看没昵称会怎样。。。', '2013-06-10 14:31:40', 1),
-(13, '', '我才不是路人呢！！！', '2013-06-10 14:46:37', 16);
+(14, '', '接下来是不是应该要实现，最后的，喜爱/祝福/管我屁事，功能啦？', '2013-06-10 15:59:30', 16),
+(18, '', 'sdfsf', '2013-06-10 18:49:35', 22),
+(13, '', '我才不是路人呢！！！', '2013-06-10 14:46:37', 16),
+(19, '你猜', '看看字体大小和评论的相比，有没有差别', '2013-06-11 13:56:54', 15),
+(22, '产品经理', '傻逼程序猿！', '2013-06-11 15:56:24', 24),
+(23, '美工', '楼上两位，消消气儿', '2013-06-11 15:56:39', 24),
+(24, '', '一群傻逼', '2013-06-11 15:58:36', 24);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
