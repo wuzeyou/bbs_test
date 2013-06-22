@@ -35,7 +35,7 @@
     <ul class="nav">
       <li><a href="index.php">添加留言</a></li>
       <li class="active"><a href="list.php">浏览留言</a></li>
-      <li><a href="#">关于</a></li>
+      <li><a href="about.html">关于</a></li>
     </ul>
   </div>
 </div>

@@ -11,10 +11,11 @@
     		<ul class="nav">
       		<li class="active"><a href="index.php">添加留言</a></li>
       		<li><a href="list.php">浏览留言</a></li>
-      		<li><a href="#">关于</a></li>
+      		<li><a href="about.html">关于</a></li>
     		</ul>
   		</div>
 	</div>
+	<div align="center">
 	<div id="addPostContainer" >
 	<form action="insert.php" method="post" name="myform" id="myform" onsubmit="return CheckPost();">
 		<div align="left">
@@ -31,6 +32,7 @@
  		</div>
 	</form>
 	</div>
+</div>
 </body>
 
 <SCRIPT language=javascript>   //check username & content, Javascript
